@@ -121,7 +121,7 @@ i.fab{
 									<div class="col-1"><i class="fas fa-map-marker"></i></div>
 									<div class="col-10">
 										<h6 class="font-weight-bold mb-0">Address:</h6>
-										<p>서울특별시 서초구 서초대로74길33 비트빌 3층</p>
+										<p>서울특별시 **** **** ****</p>
 									</div>
 								</div>
 							</li>
@@ -130,7 +130,7 @@ i.fab{
 									<div class="col-1"><i class="far fa-envelope"></i></div>
 									<div class="col-10">
 										<h6 class="font-weight-bold mb-0">Anything to ask?</h6>
-										<p>wkrleksm1@naver.com</p>
+										<p>*********@naver.com</p>
 									</div>
 								</div>
 							</li>
@@ -139,7 +139,7 @@ i.fab{
 									<div class="col-1"><i class="fas fa-phone-volume"></i></div>
 									<div class="col-10">
 										<h6 class="font-weight-bold mb-0">Address:</h6>
-										<p>010-2051-2131</p>
+										<p>010-****-****</p>
 									</div>
 								</div>
 							</li>
@@ -183,13 +183,12 @@ i.fab{
 							<c:forEach items="${ bList }" var="board" begin="1" end="3">
 								<li>
 									<div>${ board.dname}</div>
-									<div>안녕나는동우기얌</div>
 								</li>
 							</c:forEach>
 						</c:when>
 						<c:otherwise>
 						<li>
-							<h8 class="mb-4 font-weight-bold"> 글이 없습니다.</h7>
+							<h8 class="mb-4 font-weight-bold"> 글이 없습니다.</h8>
 							</li>
 						</c:otherwise>
 						</c:choose>
@@ -199,7 +198,7 @@ i.fab{
 						<h7 class="mb-4 font-weight-bold">CONTACT WITH US</h7>
 						
 						<div class="mt-4" style="position:relative;">
-							<div class="row font-weight-bold" style="position:relative; left:10%;">follow us on Instagram<a href="https://www.instagram.com/p/B1nlBNsnwsJ/?utm_source=ig_web_copy_link" title="instagram" style="margin-left:5%;"><i class="fab fa-instagram"></i></a></div>
+							<div class="row font-weight-bold" style="position:relative; left:10%;">follow us on Instagram<a href="https://www.instagram.com/su180101" title="instagram" style="margin-left:5%;"><i class="fab fa-instagram"></i></a></div>
 							
 						</div>
 					</div>
@@ -212,7 +211,7 @@ i.fab{
 				<div class="row">
 					<div class="col-md-12 ">
 						<div class="text-center text-white">
-							&copy; 2019 DangDang'S. All Rights Reserved.
+							&copy; 2021 DangDang'S. All Rights Reserved.
 						</div>
 					</div>
 				</div>
