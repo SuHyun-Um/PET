@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="diag.dao.DiagDAO">
+
+	<!-- 알고리즘에 사용됨 -->
+	<select id="selectDnameBySyname" resultType="String" parameterType="String">
+		select dname from d_symptom where syname=#{syname}
+	</select>
+	<select id="selectDnameBySpcode" resultType="String" parameterType="String">
+		select dname from d_weaken where spcode=#{spcode}
+	</select>
+	<select id="selectDnameByAge" resultType="String" parameterType="int">
+		select dname from d_disease where dage=#{dage}
+	</select>
+
+	<!-- 게시글 추가 시 알고리즘에서 사용할 수 있도록 모든 테이블에 정보 추가 -->
+	<insert id="insertDisease" parameterType="diagVO">
+		insert into d_disease values (#{dname}, #{dage})
+	</insert>
+	<insert id="insertSymptom" parameterType="diagVO">
+		insert into d_symptom values (d_symptom_seq.nextval, #{dname}, #{tempSyname})
+	</insert>
+	<insert id="insertWeaken" parameterType="diagVO">
+		insert into d_weaken values (d_weaken_seq.nextval, #{dname}, #{spcode})
+	</insert>
+	
+</mapper>

@@ -1,0 +1,55 @@
+h2{
+margin-top:10rem;
+margin-bottom:10rem;
+}
+
+
+h7:first-child:first-letter { font-size: 4rem; float: left; padding: 10px; height: 64px; 
+font-family: 'HominisNormal'; background-color: #7F7664; margin-right: 10px; color: white; border-radius: 5px; line-height: 5rem; } 
+
+
+h7:first-child:first-line { font-weight: bold; font-size: 2.3rem; color: #7f7664; }
+
+
+
+#title1{
+
+	 width:100%; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.3rem; font-family: 'Noto Sans KR';
+}
+#title2{
+	 width:100%; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.3rem; font-family: 'Noto Sans KR';
+}
+
+
+@media (max-width: 767px) {
+
+#title1{
+	font-size:1.7rem; 
+}
+#title2{
+	font-size:1.2rem;  
+}
+
+}
+
+
+@media (max-width: 575px) {
+	
+#title1{
+	font-size:1.5rem;  
+}
+#title2{
+	font-size:1rem; 
+}
+	
+}
+
+@media (max-width: 415px) {
+	
+#title1{
+	font-size:1.5rem;  
+}
+#title2{
+	font-size:1rem;  
+}
+}

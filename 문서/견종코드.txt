@@ -1,0 +1,44 @@
+미니어쳐푸들 - 		mpoo
+토이푸들 - 		tpoo
+코카스파니엘 - 		coca
+슈나우저 - 		schn
+리트리버 - 		retri
+보스턴테리어 - 		bteri
+시베리안 허스키 - 		husky
+요크셔테리어 - 		yteri
+닥스훈트 - 		dachs
+웰시코기 - 		welsh
+치와와 -			chihua
+비글 - 			beagle
+페키니즈 - 		peki
+바셋 하운드 - 		bhound
+포메라니안 - 		pome
+말티즈 - 			malte
+비숑프리제 - 		bichon
+시츄 - 			shitzu
+하바네즈 - 		hava
+사모예드 - 		samo
+도베르만핀셔 - 		dober
+저먼셰퍼드 - 		schaf
+올드 잉글리쉬 쉽독- 	oeshee
+라사 압소 - 		lassa
+포인터 - 			point
+브리트니 - 		britt
+잉글리쉬 스프링거 스파니엘 -esspan
+잉글리시 세터 - 		esett
+불테리어 - 		buteri
+케언테리어 -      		cteri
+세인트버나드 -     		stber
+불독 -         		bull
+마스티프 -        		masti
+로트와일러 -    		rott
+퍼그 -       		pug
+핏불 -        		pitbul
+알래스칸맬러뮤트 -    	amalam
+와이마라너 -     		weima
+저먼숏헤어포인터 -     	gpoint
+달마시안 -        		dalma
+블랙러시안테리어 -     	brteri
+그레이트 데인 - 		great
+아키타 - 			akita
+샤페이 - 			shar

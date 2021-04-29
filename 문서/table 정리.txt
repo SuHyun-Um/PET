@@ -1,0 +1,56 @@
+회원 테이블		    - d_member
+- 번호 pk		    - mno		number(5)
+- 아이디 uq		    - mid		varchar2(20)
+- 패스워드		    - mpassword	varchar2(20)
+- 닉네임 uq		    - mnick		varchar2(30)
+- 유저타입		    - mtype		char(1)
+- 가입날짜		    - mdate		date
+
+질병			    - d_disease
+- 질병명 pk		    - dname 		varchar2(40)
+- 취약나이		    - dage		    number(1)
+
+증상			    - d_symptom
+- 번호 pk		    - syno		    number(5)
+- 질병명 fk		    - dname		    varchar2(40)
+- 질병증상		    - syname		varchar2(30)
+
+견종 테이블		     - d_species
+- 개 진짜이름 uq		 - spname		varchar2(50)
+- 개 코드이름 pk		 - spcode		varchar2(6)
+
+취약 견종 테이블		- d_weaken
+- 번호 pk			- wno		    number(5)
+- 질병명 fk		    - dname		    varchar2(40)
+- 개 코드이름 fk		- spcode		varchar2(6)
+
+질병 내용(게시글)		- d_board
+- 번호 pk			- bno		number(5)
+- 질병명 fk		    - dname		varchar2(40)
+- 요약			    - bsum		CLOB
+- 원인			    - bcause	CLOB
+- 치료법			    - btreat	CLOB
+- 관리법			    - bcare		CLOB
+- 작성날짜		    - bdate		date
+- 이미지경로		    - bfname	LOB
+
+회원 개 테이블		- d_pet
+- 번호 pk			- pno		number(5)
+- 아이디 fk		- mid		varchar2(20)
+- 개 코드이름 fk		- spcode		varchar2(6)
+- 개 불리는 이름		- pname		varchar2(30)
+
+댓글 테이블		- d_comment
+- 번호 pk			- cno		number(5)
+- 닉네임 fk		- mnick		varchar2(30)
+- 게시글번호 fk		- bno		number(5)
+- 내용			- ccontent	CLOB
+- 작성날짜		- cdate		date
+- 글타입			- ctype		char(1)
+
+검진때 필요한 항목
+- 질병증상: 증상 - 질병 테이블에서 검색
+- 나이: 질병 테이블에서 검색
+- 취약종: 질병 테이블에서 검색        --> 알고리즘에 따라 처리
+
+

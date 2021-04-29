@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comment.dao.CommentDAO">
+	<resultMap type="commentVO" id="commentVOMap">
+		<result column="ccomment" property="ccomment" javaType="String" jdbcType="CLOB"/>
+	</resultMap>
+	
+	<!-- 댓글달기 -->
+	<insert id="insert" parameterType="commentVO">
+		insert into d_comment values(d_comment_seq.nextval, #{mnick}, #{bno}, #{ccontent}, sysdate, 'V')
+	</insert>
+	
+	<!-- 댓글조회 -->
+	<select id="selectByBno" parameterType="int" resultMap="commentVOMap">
+		select * from d_comment where bno=#{bno} and ctype='V' order by cdate desc
+	</select>
+	<!-- 댓글삭제 -->
+	<update id="updateCtypeByCno" parameterType="int">
+		update d_comment set ctype='I' where cno=#{cno}
+	</update>
+</mapper>

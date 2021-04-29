@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.dao.BoardDAO">
+	<resultMap type="boardVO" id="boardVOMap">
+		<result column="bsum" property="bsum" javaType="String" jdbcType="CLOB"/>
+		<result column="bcause" property="bcause" javaType="String" jdbcType="CLOB"/>
+		<result column="btreat" property="btreat" javaType="String" jdbcType="CLOB"/>
+		<result column="bcare" property="bcare" javaType="String" jdbcType="CLOB"/>
+		<result column="bfpath" property="bfpath" javaType="String" jdbcType="CLOB"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="boardVOMap" parameterType="String">
+		select * from d_board
+		<where>
+		<![CDATA[
+		dname like '%${query}%' or
+		bsum like '%${query}%' or
+		bcause like '%${query}%' or
+		btreat like '%${query}%' or
+		bcare like '%${query}%']]>
+		
+		</where>
+		order by bno desc
+	</select>
+	
+	<!-- 글 번호에 따른 게시글 보여주기 -->
+	<select id="selectResult" resultMap="boardVOMap">
+		select * from d_board where bno=#{bno}
+	</select>	
+	
+	<!-- 병별로 증상 가져오기 -->
+	<select id="selectSyNameByBno" parameterType="int" resultType="String">
+		select syname from d_symptom where dname=(select dname from d_board where bno=#{bno})
+	</select>
+	
+	<!-- 병명에 따른 글 번호 링크를 jsp에 줄 때에 사용 -->
+	<select id="selectBnoByDname" resultMap="boardVOMap">
+		select bno, dname, bsum from d_board where dname=#{dname}
+	</select>
+	
+	<!-- 취약종에 따른 게시글 보여주기 -->
+	<select id="selectBnoBySp" parameterType="String" resultType="boardVO">	
+		select * from d_board where d_board.dname in(select dname from d_weaken 
+		where spcode=#{spcode}) order by bno desc
+	</select>
+
+	<!-- 운영자가 게시글 추가 -->
+	<insert id="insert" parameterType="boardVO">
+		insert into d_board(bno, dname, bsum, bcause, btreat, bcare, bdate, bfname)
+		values (d_board_seq.nextval, #{dname}, #{bsum}, #{bcause}, #{btreat}, #{bcare}, sysdate, #{bfname})
+	</insert>
+	
+</mapper>

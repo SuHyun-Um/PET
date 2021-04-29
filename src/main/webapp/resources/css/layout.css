@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+초기화 코드
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.backgroundForm {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  resize:horizontal; 
+  margin-top:0;
+
+}
+header {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+	font-family: verdana, sans-serif;
+	font-size: 13px;
+}
+/*
+header {
+	margin: 1%;
+	margin-left: 15%;
+	margin-right: 15%;
+	min-height: 60px;
+}
+
+footer {
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: lightgray;
+	min-height: 30px;
+	padding: 10px;
+}
+
+section {
+	margin-left: 17%;
+	margin-right: 17%;
+	min-height: 400px;
+}
+
+a:link, a:visited {
+	color: #718ABE;	
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+

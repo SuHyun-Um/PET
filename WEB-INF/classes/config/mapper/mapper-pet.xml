@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pet.dao.PetDAO">
+	
+	<!-- 내 댕댕이 등록 -->
+	<insert id="insertPet" parameterType="petVO">
+		insert into d_pet values(d_pet_seq.nextval, #{mid}, #{spcode}, #{pname})
+	</insert>
+	<!-- 내 댕댕이 등록 시  개 코드로 개 이름 가져오기 -->
+	<select id="selectSpnameBySpcode" parameterType="String" resultType="String">
+		select spname from d_species where spcode=#{spcode}
+	</select>
+	<!-- 내 댕댕이 정보 가져오기 -->
+	<select id="selectDpetByMid" parameterType="String" resultType="petVO">
+		select p.pno, p.pname, p.spcode, s.spname from d_pet p, d_species s 
+		where p.spcode=s.spcode and p.mid=#{mid}
+	</select>
+	
+	<!-- 내 댕댕이 삭제 -->
+	<delete id="deleteDpetByPno" parameterType="int">
+		delete d_pet where pno=#{pno}
+	</delete>
+</mapper>

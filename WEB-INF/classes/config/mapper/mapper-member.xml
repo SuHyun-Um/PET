@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.dao.MemberDAO">
+
+	<!-- 회원가입 -->
+	<insert id="insertMember" parameterType="memberVO">
+		insert into d_member(mno, mid, mpassword, mnick) values(d_member_seq.nextval, #{mid}, #{mpassword}, #{mnick})
+	</insert>
+
+	<!-- 아이디, 닉네임 중복검사 -->
+	<select id="checkId" parameterType="String" resultType="memberVO">
+		select mid from d_member where mid=#{mid}
+	</select>
+	<select id="checkNick" parameterType="String" resultType="memberVO">
+		select mnick from d_member where mnick=#{mnick}
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="login" parameterType="memberVO" resultType="memberVO">
+		select * from d_member where mid=#{mid} and mpassword=#{mpassword}
+	</select>
+	
+	<!-- 내 정보 수정 -->
+	<update id="updateMember" parameterType="memberVO">
+		update d_member set mnick=#{mnick}, mpassword=#{mpassword} where mid=#{mid}
+	</update>
+
+</mapper>

@@ -1,0 +1,187 @@
+h4,h5,h6{white-space: nowrap;}
+/*
+�썝�옒 p�깭洹몄��쑝�굹 p�깭洹몃뒗 諛섏쓳�삎�쑝濡� 湲��옄 �겕湲곕�� 諛붽퓭以� �닔媛� �뾾�뼱�꽌 h�깭洹몃줈 援먯껜�븯���쓬(�썝�씤 李얜뒗�뜲 �떆媛� �뱶�읇寃� �삤�옒嫄몃┝ �뀪)
+*/
+
+.top-content .carousel-item{
+  width: 100%;  
+  min-height: 100vh;
+  height:100%;
+  background-size: 100% 100%;
+  
+  
+}
+
+
+@media (min-width: 1040px) and (max-width: 1400px) 
+{
+	.navbar-expand-md .navbar-nav .nav-link {	padding-left: 0.4rem; padding-right: 0.4rem; font-size:1.9rem ; letter-spacing: 0}
+	
+	
+	
+}
+
+
+#bg1{
+  background-image:url(../img/backgrounds/1.jpg);
+}
+#bg2{
+  background-image:url(../img/backgrounds/2.jpg);
+}
+#bg3{
+  background-image:url(../img/backgrounds/3.jpg);
+}
+
+
+@media (min-width: 960px) and (max-width: 1039px) {
+
+	
+	.navbar-expand-md .navbar-nav .nav-link {	 padding-left: 0.3rem; padding-right: 0.3rem; font-size:1.9rem ; letter-spacing: 0}
+h4{
+	font-size:2.3rem;font-weight:300;
+}
+h5{
+	font-size:2.3rem;font-weight:800;
+}
+h6{
+	font-size:1.4rem;font-weight:400;
+}
+
+h7{
+	font-size: 1.7rem;
+}	
+
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+	
+	.navbar-expand-md .navbar-nav .nav-link { padding-left: 0.1rem; padding-right: 0.1rem; font-size:1.9rem; letter-spacing: 0}
+	.top-content .carousel-caption { width:80%; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
+h4{
+	font-size:2.3rem;font-weight:300;
+}
+h5{
+	font-size:2.3rem;font-weight:800;
+}
+h6{
+	font-size:1.4rem;font-weight:400;
+}
+	
+	
+	
+} 
+
+@media (max-width: 767px) {
+	.navbar-expand-md .navbar-nav .nav-link { width:100%; color:rgba(255,255,255,0.8); font-weight: 100; border: 3px solid gray; background-color:rgba(0,0,0,0.99); font-family:'Noto Sans KR'; font-weight:100;font-size:1.2rem; margin:0;padding:0; letter-spacing: 0}
+	.navbar-brand{position:absolute; left:43%;} 
+	.navbar.navbar-no-bg { background: #444; }
+	.navbar-dark .navbar-toggler { border-color: #444; }
+	.carousel-control-prev, .carousel-control-next{display:none;}
+	.navbar-dark .navbar-toggler:focus { background: #333; outline: 0; }
+	
+	
+	.top-content .carousel-caption { width:80%; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
+h4{
+	font-size:2.3rem;font-weight:300;
+}
+h5{
+	font-size:2.3rem;font-weight:800;
+}
+h6{
+	font-size:1.4rem;font-weight:400;
+}
+
+}
+
+@media (max-width: 575px) {
+	
+	.top-content .carousel-caption { bottom: 0; position: absolute; width:80%; top: 50%; left: 50%; transform : translate(-50%,-50%);}
+	.top-content h1 { font-size: 18px; line-height: 30px; }
+	.top-content .carousel-indicators li{display:none;}
+	.navbar-brand{position:absolute; left:43%;}
+h4{
+	font-size:2.3rem;font-weight:300;
+}
+h5{
+	font-size:2.3rem;font-weight:800;
+}
+h6{
+	font-size:1.4rem;font-weight:400;
+}
+}
+
+@media (max-width: 415px) {
+	
+	.top-content .carousel-caption { bottom: 0; position: absolute; width:70%; top: 50%; left: 50%; transform : translate(-50%,-50%);}
+h4{
+	font-size:1.9rem;font-weight:300; width:80%; white-space: overwrap; margin-left:7%;
+}
+h5{
+	font-size:1.9rem;font-weight:800; width:80%; white-space: overwrap;  margin-left:7%;
+}
+h6{
+	font-size:1rem;font-weight:400; width:80%; white-space: overwrap;  margin-left:7%;
+}
+	
+	.navbar-brand{position:absolute; left:43%; size: 25%;}
+
+	.top-content{
+		min-height: 30rem;
+  		
+	}
+
+.top-content .carousel-item{
+  width: 100%;  
+  min-height: 30rem;
+  
+  background-size: 50% 50%;
+  
+  
+}
+
+	
+#bg1{
+	 background-color: #444444;
+	 background-image:url(../img/backgrounds/mbg1.jpg);
+	background-blend-mode: multiply;	
+	
+
+}
+#bg2{
+   background-color: #444444;
+	 background-image:url(../img/backgrounds/mbg2.jpg);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-position: center;
+}
+#bg3{
+  background-color: #444444;
+	 background-image:url(../img/backgrounds/mbg3.jpg);
+	 background-blend-mode: multiply;
+	 background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-position: center;
+}
+
+}
+
+
+/* Retina-ize images/icons */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+	/* logo */
+    .navbar-brand {
+    	background-image: url(../img/logo.png) !important; background-repeat: no-repeat !important; background-size: 100% 100% !important;
+    }
+	
+}
