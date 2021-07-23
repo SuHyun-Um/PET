@@ -12,7 +12,16 @@
 	</resultMap>
 	
 	<select id="selectAll" resultMap="boardVOMap" parameterType="String">
-		select * from d_board
+        select
+        bno
+        ,dname
+        ,bsum
+        ,bcause
+        ,btreat
+        ,bcare
+        ,to_char(bdate,'YYYY-MM-DD') as bdate
+        ,bfname
+        from d_board
 		<where>
 		<![CDATA[
 		dname like '%${query}%' or
@@ -27,7 +36,18 @@
 	
 	<!-- 글 번호에 따른 게시글 보여주기 -->
 	<select id="selectResult" resultMap="boardVOMap">
-		select * from d_board where bno=#{bno}
+	select
+        bno
+        ,dname
+        ,bsum
+        ,bcause
+        ,btreat
+        ,bcare
+        ,to_char(bdate,'YYYY-MM-DD') as bdate
+        ,bfname
+    from d_board
+
+        where bno=#{bno}
 	</select>	
 	
 	<!-- 병별로 증상 가져오기 -->
